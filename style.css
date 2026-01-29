@@ -1,0 +1,127 @@
+body {
+    background-color: rgb(251, 242, 242);
+    font-family: "Sulphur Point", sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    justify-content: space-between;
+    -webkit-box-shadow: 0px 6px 12px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 0px 6px 12px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 0px 6px 12px -5px rgba(34, 60, 80, 0.6);
+}
+
+.navbar-left {
+    display: flex;
+    gap: 2px;
+    margin-left: 70px;
+    padding-top: 5px;
+    padding-bottom: 5px; 
+}
+
+.navbar-right {
+    display: flex;
+    gap: 10px;
+    margin-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px; 
+}
+
+button {
+    background: none;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 5px 20px;
+    border-radius: 8px;
+    font-family: "Sulphur Point", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.23s ease-in-out;
+}
+
+button:hover {
+    color: rgb(93, 93, 93);
+}
+
+.log-in-btn {
+    background-color: black;
+    color: white;
+    border: solid 2px;
+    border-radius: 15px;
+    transition: all 0.2s ease;
+}
+
+.log-in-btn:hover {
+    background-color: rgb(251, 242, 242);;
+    color: black;
+}
+
+.main_background {
+    position: relative; /* Это уже есть */
+    width: 100%;
+    height: 400px; /* Убедитесь, что высота задана явно */
+    margin: 0; /* Уберите лишние отступы */
+    padding: 0; /* Уберите внутренние отступы */
+    overflow: hidden;
+    -webkit-box-shadow: 0px 6px 12px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 0px 6px 12px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 0px 6px 12px -5px rgba(34, 60, 80, 0.6);
+}
+
+.image_background {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 400px;
+    background: url('images/main_background.jpg') center/cover no-repeat;
+    transition: all 0.3s ease-in-out;
+}
+
+.image_background::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, 
+            rgba(255,255,255,0.8) 0%,    /* Белый вверху */
+            rgba(255,255,255,0.6) 20%,
+            rgba(255,255,255,0.3) 40%,
+            rgba(0,0,0,0.3) 60%,        /* Начинается черный */
+            rgba(0,0,0,0.6) 80%,
+            rgba(0,0,0,0.8) 100%,
+            transparent 100%  
+            );
+            z-index: 2;
+        }
+
+.image_background:hover {
+    transform: scale(1.02);
+}
+
+.header-in-image {
+    display: flex;
+    position: relative;
+    pointer-events: none;
+    z-index: 100;
+    justify-content: center;
+    padding-top: 100px;
+    font-weight: 900;
+    font-size: 35px;
+    color: rgb(251, 242, 242);;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.subheader-in-image {
+    font-size: 20px;
+    margin-top: 5px;
+    display: block;
+}
